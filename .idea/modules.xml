@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LearnOkhttp.iml" filepath="$PROJECT_DIR$/LearnOkhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RxGalleryFinalLib/RxGalleryFinalLib.iml" filepath="$PROJECT_DIR$/RxGalleryFinalLib/RxGalleryFinalLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learnokhttp2/learnokhttp2.iml" filepath="$PROJECT_DIR$/learnokhttp2/learnokhttp2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learnokhttputil/learnokhttputil.iml" filepath="$PROJECT_DIR$/learnokhttputil/learnokhttputil.iml" />
+    </modules>
+  </component>
+</project>
