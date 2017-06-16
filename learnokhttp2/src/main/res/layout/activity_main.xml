@@ -5,112 +5,39 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/mTextViewShowInfo"
+            android:id="@+id/mTvResult"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_height="wrap_content"/>
 
-        <ImageView
+        <ProgressBar
             android:visibility="gone"
-            android:id="@+id/mImg"
+            android:id="@+id/mPbProgress"
             android:layout_width="match_parent"
-            android:layout_height="100dp"/>
+            android:layout_height="wrap_content"/>
 
         <Button
-            android:visibility="gone"
-            android:id="@+id/mButtonDoGet"
+            android:id="@+id/mBtnPostFileAsyncHttpClient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:text="mButtonDoGet"
+            android:text="mBtnPostFileAsyncHttpClient"
             android:textAllCaps="false"/>
 
-
         <Button
-            android:visibility="gone"
-            android:id="@+id/mButtonDoPost"
+            android:id="@+id/mBtnPostFileOkHttp2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:text="mButtonDoPost"
+            android:text="mBtnPostFileOkHttp2"
             android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/mButtonDoPostString"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="mButtonDoPost"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/mButtonDoPostFile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="mButtonDoPostFile"
-            android:textAllCaps="false"/>
-
-
-        <Button
-            android:id="@+id/mGetAsyncHttp"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="mGetAsyncHttp"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/mGetSyncHttp"
-            android:layout_width="match_parent"
-            android:visibility="gone"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="mGetSyncHttp"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/mBtnCancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:visibility="gone"
-            android:layout_marginTop="10dp"
-            android:text="mBtnCancel"
-            android:textAllCaps="false"/>
-
-        <Button
-            android:id="@+id/mOpenGallery"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:visibility="gone"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="openGallery"
-            android:textAllCaps="false"/>
-
 
     </LinearLayout>
 

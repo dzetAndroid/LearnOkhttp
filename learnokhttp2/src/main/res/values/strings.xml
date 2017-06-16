@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LearnOkhttp2</string>
+    <string name="upload_start">上传开始</string>
+    <string name="upload_cancel">上传取消</string>
+    <string name="upload_succeed">上传成功</string>
+    <string name="upload_error">上传错误</string>
+    <string name="request_succeed">请求成功</string>
+    <string name="request_failed">请求失败</string>
 </resources>

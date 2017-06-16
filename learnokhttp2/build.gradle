@@ -1,13 +1,15 @@
 apply plugin: 'com.android.application'
 
-android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+def conf = rootProject.ext.version
+def libs = rootProject.ext.dependencies
 
+android {
+    compileSdkVersion conf.compileSdkVersion
+    buildToolsVersion conf.buildToolsVersion
     defaultConfig {
         applicationId "com.zet.learnokhttp2"
-        minSdkVersion 15
-        targetSdkVersion 25
+        minSdkVersion conf.minSdkVersion
+        targetSdkVersion conf.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -24,28 +26,25 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-//        exclude group: 'com.android.support', module: 'support-annotations'
-//    })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    // 1. gradle okhttp2
-    compile 'com.squareup.okhttp:okhttp:2.7.5'
-    compile 'com.squareup.okio:okio:1.7.0'
-    // fastjson
-    compile 'com.alibaba:fastjson:1.2.32'
-    // rxgallery
-//    compile 'cn.finalteam.rxgalleryfinal:library:1.0.7'
-    // v7
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
 
-    //支持以下主流图片加载器，开发者自行选择
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+    compile 'com.squareup.okio:okio:1.7.0'
+
+//    compile 'com.zhy:okhttputils:2.6.2'
+
+    compile 'com.loopj.android:android-async-http:1.4.9'
+
+    compile 'com.alibaba:fastjson:1.2.32'
+
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.facebook.fresco:fresco:0.12.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 
-    compile 'com.loopj.android:android-async-http:1.4.9' // 网络请求框架asynchttp
+    compile 'com.yanzhenjie:permission:1.0.8'
 
 }

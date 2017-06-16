@@ -1,1 +1,1 @@
-include ':app', ':learnokhttputil', ':learnokhttp2'
+include ':learnokhttp2'

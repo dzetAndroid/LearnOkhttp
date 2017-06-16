@@ -18,7 +18,7 @@
 //apply from: 'config.gradle'
 
 // 3 使用
-//def conf = rootProject.ext.android
+//def conf = rootProject.ext.version
 //def libs = rootProject.ext.dependencies
 
 //compileSdkVersion conf.compileSdkVersion
@@ -44,16 +44,19 @@ ext {
             junit            : 'junit:junit:4.12', // 单元测试工具
             jsoup            : 'org.jsoup:jsoup:1.10.2', // java爬虫, html解析工具
 
-            okhttp3       : 'com.squareup.okhttp3:okhttp:3.8.0', // 网络请求框架okhttp3
-            async_http    : 'com.loopj.android:android-async-http:1.4.9', // 网络请求框架asynchttp
+//            nohttp           : 'com.yanzhenjie.nohttp:nohttp:1.1.2',
+//            no_okhttp        : 'com.yanzhenjie.nohttp:okhttp:1.1.2',
 
-            easysp        : 'com.white:easysp:1.0.0', // sharedpreferences 工具类
+            okhttp3          : 'com.squareup.okhttp3:okhttp:3.8.0', // 网络请求框架okhttp3
+            async_http       : 'com.loopj.android:android-async-http:1.4.9', // 网络请求框架asynchttp
 
-            glide         : 'com.github.bumptech.glide:glide:4.0.0-RC0', // 图片加载框架glide
+            easysp           : 'com.white:easysp:1.0.0', // sharedpreferences 工具类
 
-            gson          : 'com.google.code.gson:gson:2.8.0',   // json解析 gson
-            fastjson      : 'com.alibaba:fastjson:1.2.32', // json解析 fastjson
-            rxgalleryfinal: 'cn.finalteam.rxgalleryfinal:library:1.0.7', // 图片选择器
-            galleryfinal  : 'cn.finalteam:galleryfinal:1.4.8.7'// 图片选择器
+            glide            : 'com.github.bumptech.glide:glide:4.0.0-RC0', // 图片加载框架glide
+
+            gson             : 'com.google.code.gson:gson:2.8.0',   // json解析 gson
+            fastjson         : 'com.alibaba:fastjson:1.2.32', // json解析 fastjson
+            rxgalleryfinal   : 'cn.finalteam.rxgalleryfinal:library:1.0.7', // 图片选择器
+            galleryfinal     : 'cn.finalteam:galleryfinal:1.4.8.7'// 图片选择器
     ]
 }
