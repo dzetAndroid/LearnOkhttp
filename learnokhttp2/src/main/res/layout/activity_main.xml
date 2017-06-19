@@ -13,31 +13,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <ProgressBar
-            android:visibility="gone"
-            android:id="@+id/mPbProgress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
         <Button
-            android:id="@+id/mBtnPostFileAsyncHttpClient"
+            android:id="@+id/mBtnPostStream"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:text="mBtnPostFileAsyncHttpClient"
-            android:textAllCaps="false"/>
+            android:text="mBtnPostStream"
+            android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/mBtnPostFileOkHttp2"
+            android:id="@+id/mBtnPostMulti"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:text="mBtnPostFileOkHttp2"
+            android:text="mBtnPostMulti"
             android:textAllCaps="false"/>
+
+
+        <Button
+            android:id="@+id/mBtnDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="mBtnDown"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/mImg"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
 
     </LinearLayout>
 

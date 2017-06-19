@@ -1,7 +1,7 @@
 package com.zet.learnokhttp2.bean;
 
 /**
- * Created by Zet on 2017/6/13.
+ * 用户实体类
  */
 
 public class User

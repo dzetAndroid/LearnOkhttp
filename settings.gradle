@@ -1,1 +1,1 @@
-include ':learnokhttp2'
+include ':learnokhttp2', ':learnokhttp3'
