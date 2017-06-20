@@ -9,16 +9,25 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import okhttp3.Call;
 
+/**
+ * 主活动Activity
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * 静态常量TAG
+     */
     private static final String TAG = "MainActivity";
 
+    /**
+     * 创建
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        getHtml();
 
     }
 
@@ -30,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         OkHttpUtils
                 .get()
                 .url(url)
-                .addParams("username", "hyman")
-                .addParams("password", "123")
+                .addParams("username", "user_1")
+                .addParams("password", "pass_1")
                 .build()
                 .execute(new StringCallback() {
                     @Override

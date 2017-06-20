@@ -12,28 +12,36 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.OkHttpClient;
 
 /**
- * Created by Zet on 2017/6/19.
+ * application
+ * 全局类
  */
 
 public class IApp extends Application {
 
+    /**
+     * 创建
+     */
     @Override
     public void onCreate() {
         super.onCreate();
 
-        initOkHttp3();
+        initOkHttpUtils();
     }
 
-    private void initOkHttp3() {
+    /**
+     * 初始化
+     * okhttputils
+     */
+    private void initOkHttpUtils() {
         CookieJarImpl cookieJar = new CookieJarImpl(new PersistentCookieStore(getApplicationContext()));
+
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
-//                .addInterceptor(new LoggerInterceptor("TAG"))
                 .connectTimeout(10000L, TimeUnit.MILLISECONDS)
                 .readTimeout(10000L, TimeUnit.MILLISECONDS)
                 .cookieJar(cookieJar)
-                .addInterceptor(new LoggerInterceptor("TAG"))
+                .addInterceptor(new LoggerInterceptor("okhttputils")) // 日志拦截器 TAG
                 .build();
 
-        OkHttpUtils.initClient(okHttpClient);
+        OkHttpUtils.initClient(okHttpClient); // 初始化
     }
 }

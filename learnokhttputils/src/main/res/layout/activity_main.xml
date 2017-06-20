@@ -4,8 +4,14 @@
     android:layout_height="match_parent">
 
 
+    <!--
+        layout_gravity 指当前控件在其容器布局的对齐方式
+        gravity 指当前控件中text hint 在当前布局中的对齐方式
+    -->
     <TextView
         android:id="@+id/mTVInfo"
+        android:hint="minfo"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
