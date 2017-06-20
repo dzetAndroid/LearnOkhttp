@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <!--
-        layout_gravity 指当前控件在其容器布局的对齐方式
-        gravity 指当前控件中text hint 在当前布局中的对齐方式
-    -->
-    <TextView
-        android:id="@+id/mTVInfo"
-        android:hint="minfo"
-        android:gravity="center"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/mBtnGet_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnGet_1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnGet_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnGet_2"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/mTVInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="minfo" />
+
+        <!--
+            layout_gravity 指当前控件在其容器布局的对齐方式
+            gravity 指当前控件中text hint 在当前布局中的对齐方式
+        -->
+
+    </LinearLayout>
+
+</ScrollView>

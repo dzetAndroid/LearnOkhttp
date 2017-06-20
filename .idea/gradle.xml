@@ -8,7 +8,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/learnokgo_kotlin" />
             <option value="$PROJECT_DIR$/learnokhttp2" />
+            <option value="$PROJECT_DIR$/learnokhttp3" />
             <option value="$PROJECT_DIR$/learnokhttputils" />
           </set>
         </option>
