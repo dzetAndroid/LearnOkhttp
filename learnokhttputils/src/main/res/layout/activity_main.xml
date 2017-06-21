@@ -9,23 +9,51 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/mBtnGet_1"
+            android:id="@+id/mBtnGet1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="mBtnGet_1"
+            android:text="mBtnGet1"
             android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/mBtnGet_2"
+            android:id="@+id/mBtnGet2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="mBtnGet_2"
+            android:text="mBtnGet2"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnPost1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnPost1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnPostJSON1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnPostJSON1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnPostFile1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnPostFile1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnPostFormFile1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnPostFormFile1"
             android:textAllCaps="false" />
 
         <TextView
             android:id="@+id/mTVInfo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:hint="minfo" />
 
         <!--

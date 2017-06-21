@@ -48,6 +48,7 @@ ext {
 //            no_okhttp        : 'com.yanzhenjie.nohttp:okhttp:1.1.2',
 
             okhttp3          : 'com.squareup.okhttp3:okhttp:3.8.0', // 网络请求框架okhttp3
+            okhttputils      : 'com.zhy:okhttputils:2.6.2', //
             async_http       : 'com.loopj.android:android-async-http:1.4.9', // 网络请求框架asynchttp
 
             easysp           : 'com.white:easysp:1.0.0', // sharedpreferences 工具类
@@ -56,8 +57,11 @@ ext {
 
             gson             : 'com.google.code.gson:gson:2.8.0',   // json解析 gson
             fastjson         : 'com.alibaba:fastjson:1.2.32', // json解析 fastjson
+
             rxgalleryfinal   : 'cn.finalteam.rxgalleryfinal:library:1.0.7', // 图片选择器
-            galleryfinal     : 'cn.finalteam:galleryfinal:1.4.8.7'// 图片选择器
+            galleryfinal     : 'cn.finalteam:galleryfinal:1.4.8.7', // 图片选择器
+
+            andpermission    : 'com.yanzhenjie:permission:1.0.8' // andpermission 运行时权限
     ]
 }
 
