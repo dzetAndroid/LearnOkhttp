@@ -1,6 +1,7 @@
 package com.zet.learnokhttp3;
 
 import android.Manifest;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -8,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +21,8 @@ import com.yanzhenjie.permission.RationaleListener;
 import com.zet.learnokhttp3.app.IApp;
 import com.zet.learnokhttp3.bean.User;
 import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.BitmapCallback;
+import com.zhy.http.okhttp.callback.FileCallBack;
 import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.io.File;
@@ -49,6 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnPostJSON1;
     private Button mBtnPostFile1;
     private Button mBtnPostFormFile1;
+    private Button mBtnDown1;
+    private ImageView mIVShow;
+    private Button mBtnDownAndShowImage1;
+    private Button mBtnDownAndShowProgress1;
+    private ProgressBar mPBShow;
+    private TextView mTVNum;
 
     /**
      * 创建
@@ -60,7 +71,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        requestPermission();
+        if (savedInstanceState == null) {
+            requestPermission();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     /**
@@ -124,7 +142,117 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.mBtnPostFormFile1:
                 btnFormFile1();
                 break;
+            case R.id.mBtnDown1:
+                btnDown1();
+                break;
+            case R.id.mBtnDownAndShowImage1:
+                btnDownAndShowImage1();
+                break;
+            case R.id.mBtnDownAndShowProgress1:
+                mBtnDownAndShowProgress1();
+                break;
         }
+    }
+
+    /**
+     * get file to pregress show
+     */
+    private void mBtnDownAndShowProgress1() {
+        try {
+            String url = "http://filelx.liqucn.com/upload/2017/302/p/Amap_V8.0.8.2180_android_C02110001851_Build1705252208.apk";
+            String canonicalPath = Environment.getExternalStorageDirectory().getCanonicalPath();
+            String fileName = "Amap_V8.0.8.2180_android_C02110001851_Build1705252208.apk";
+
+            OkHttpUtils
+                    .get()
+                    .url(url)
+                    .build()
+                    .execute(new FileCallBack(canonicalPath, fileName) {
+                        @Override
+                        public void onError(Call call, Exception e, int id) {
+                            e.printStackTrace();
+                        }
+
+                        @Override
+                        public void onResponse(File response, int id) {
+                            Log.e(TAG, "onResponse: " + response.getAbsolutePath());
+                        }
+
+                        @Override
+                        public void inProgress(float progress, long total, int id) {
+                            Log.e(TAG, "inProgress: " + progress + " " + total);
+                            float i = progress * 100;
+                            // android.content.res.Resources$NotFoundException: String resource ID #0x0
+                            mTVNum.setText(String.valueOf(i));
+                            mPBShow.setProgress((int) i);
+                        }
+                    });
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * get file to image show it
+     * bitmapcallback
+     */
+    private void btnDownAndShowImage1() {
+        try {
+            String imageUrl = "http://hukai.me/android-training-course-in-chinese/basics/actionbar/actionbar-actions.png";
+
+            OkHttpUtils
+                    .get()
+                    .url(imageUrl)
+                    .build()
+                    .execute(new BitmapCallback() {
+                        @Override
+                        public void onError(Call call, Exception e, int id) {
+                            e.printStackTrace();
+                        }
+
+                        @Override
+                        public void onResponse(Bitmap response, int id) {
+                            mIVShow.setImageBitmap(response);
+                        }
+                    });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * get file
+     * filecallback(parentPath, fileName)
+     */
+    private void btnDown1() {
+        try {
+            String imageUrl = "http://img.blog.csdn.net/20170620081902491?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFkdXhpbmd6aGU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast";
+            String canonicalPath = Environment.getExternalStorageDirectory().getCanonicalPath();
+            String fileName = "20170620081902491.png";
+
+            OkHttpUtils
+                    .get() // 指定类型
+                    .url(imageUrl) // 指定地址
+                    .build() // 构造
+                    .execute(new FileCallBack(canonicalPath, fileName) { // 执行
+                        @Override
+                        public void onError(Call call, Exception e, int id) {
+                            e.printStackTrace();
+                        }
+
+                        @Override
+                        public void onResponse(File response, int id) {
+                            Log.e(TAG, "onResponse: " + response.getAbsolutePath());
+                        }
+                    });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     /**
@@ -302,5 +430,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnPostFile1.setOnClickListener(this);
         mBtnPostFormFile1 = (Button) findViewById(R.id.mBtnPostFormFile1);
         mBtnPostFormFile1.setOnClickListener(this);
+        mBtnDown1 = (Button) findViewById(R.id.mBtnDown1);
+        mBtnDown1.setOnClickListener(this);
+        mIVShow = (ImageView) findViewById(R.id.mIVShow);
+        mIVShow.setOnClickListener(this);
+        mBtnDownAndShowImage1 = (Button) findViewById(R.id.mBtnDownAndShowImage1);
+        mBtnDownAndShowImage1.setOnClickListener(this);
+        mBtnDownAndShowProgress1 = (Button) findViewById(R.id.mBtnDownAndShowProgress1);
+        mBtnDownAndShowProgress1.setOnClickListener(this);
+        mPBShow = (ProgressBar) findViewById(R.id.mPBShow);
+        mPBShow.setOnClickListener(this);
+        mTVNum = (TextView) findViewById(R.id.mTVNum);
+        mTVNum.setOnClickListener(this);
     }
 }

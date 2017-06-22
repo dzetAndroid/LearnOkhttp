@@ -44,6 +44,7 @@ public class IApp extends Application {
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(10000L, TimeUnit.MILLISECONDS) // 连接超时
+                .writeTimeout(10000L, TimeUnit.SECONDS) //
                 .readTimeout(10000L, TimeUnit.MILLISECONDS) // 读取超时
                 .cookieJar(cookieJar) // cookie
                 .addInterceptor(new LoggerInterceptor("okhttputils")) // 日志拦截器 TAG

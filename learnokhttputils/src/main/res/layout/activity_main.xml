@@ -50,11 +50,50 @@
             android:text="mBtnPostFormFile1"
             android:textAllCaps="false" />
 
+        <Button
+            android:id="@+id/mBtnDown1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnDown1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnDownAndShowImage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnDownAndShowImage1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/mBtnDownAndShowProgress1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mBtnDownAndShowProgress1"
+            android:textAllCaps="false" />
+
         <TextView
             android:id="@+id/mTVInfo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="minfo" />
+
+        <ImageView
+            android:id="@+id/mIVShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/mPBShow"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/mTVNum"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:hint="0"
+            android:layout_height="wrap_content" />
 
         <!--
             layout_gravity 指当前控件在其容器布局的对齐方式
