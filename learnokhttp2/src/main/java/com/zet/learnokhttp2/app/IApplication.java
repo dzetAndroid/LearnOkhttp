@@ -12,12 +12,10 @@ import java.util.concurrent.TimeUnit;
  * application
  */
 
-public class IApplication extends Application
-{
+public class IApplication extends Application {
 
     @Override
-    public void onCreate()
-    {
+    public void onCreate() {
         super.onCreate();
 
         initOkhttp();
@@ -26,8 +24,7 @@ public class IApplication extends Application
     // 创建okhttpclient对象
     public final static OkHttpClient okHttpClient = new OkHttpClient();
 
-    private void initOkhttp()
-    {
+    private void initOkhttp() {
         File sdcache = getExternalCacheDir();
         int cacheSize = 10 * 1024 * 1024;
         okHttpClient.setCache(new Cache(sdcache.getAbsoluteFile(), cacheSize));

@@ -9,10 +9,8 @@ import static junit.framework.Assert.assertEquals;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleInstrumentedTest
-{
-    public void useAppContext() throws Exception
-    {
+public class ExampleInstrumentedTest {
+    public void useAppContext() throws Exception {
         // Context of the app under test.
 //        Context appContext = InstrumentationRegistry.getTargetContext();
 
