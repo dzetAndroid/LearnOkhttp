@@ -159,14 +159,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 finish();
                                 break;
                         }
-                        if (AndPermission.hasAlwaysDeniedPermission(MainActivity.this, deniedPermissions)) {
-                            AndPermission.defaultSettingDialog(MainActivity.this, request_code_settings).show();
+                        if (AndPermission.hasAlwaysDeniedPermission(
+                                MainActivity.this, deniedPermissions)) {
+                            AndPermission.defaultSettingDialog(
+                                    MainActivity.this, request_code_settings).show();
                         }
                     }
                 }) // 回调
                 .rationale(new RationaleListener() {
                     @Override
-                    public void showRequestPermissionRationale(int requestCode, Rationale rationale) {
+                    public void showRequestPermissionRationale(
+                            int requestCode, Rationale rationale) {
                         AndPermission.rationaleDialog(MainActivity.this, rationale).show();
                     }
                 }) // 基本理由
@@ -233,7 +236,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String fielName = "sdl_log.txt";
             File file = new File(canonicalPath, fielName);
             // mediatype 文件类型 application/octet-stream
-            RequestBody fileBody = RequestBody.create(MediaType.parse("application/octet-stream"), file);
+            RequestBody fileBody = RequestBody.create(
+                    MediaType.parse("application/octet-stream"), file);
 
             MultipartBody.Builder multipartBodyBuilder = new MultipartBody.Builder();
             MultipartBody multipartBody = multipartBodyBuilder
