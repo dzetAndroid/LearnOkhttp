@@ -1,4 +1,4 @@
-package com.zet.learnokgo;
+package com.zet.learnokgo.app;
 
 import android.app.Application;
 
