@@ -49,6 +49,7 @@ ext {
 
             okhttp3          : 'com.squareup.okhttp3:okhttp:3.8.0', // 网络请求框架okhttp3
             okhttputils      : 'com.zhy:okhttputils:2.6.2', //
+            okgo             : 'com.lzy.net:okgo:3.0.1', // okgo
             async_http       : 'com.loopj.android:android-async-http:1.4.9', // 网络请求框架asynchttp
 
             easysp           : 'com.white:easysp:1.0.0', // sharedpreferences 工具类
